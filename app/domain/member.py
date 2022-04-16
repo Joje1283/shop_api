@@ -1,18 +1,17 @@
+from __future__ import annotations
+
 from typing import Iterable
+from typing import TYPE_CHECKING
+from .entity import Entity
 
-from .address import Address
-from .orders import Order
+if TYPE_CHECKING:
+    from .orders import Order
+    from .address import Address
 
 
-class Member:
+class Member(Entity):
     def __init__(self, id: str, name: str, address: Address, orders: Iterable[Order]):
         self.id: str = id
         self.name: str = name
         self.address: Address = address
         self.orders = orders
-
-    def __eq__(self, o: object) -> bool:
-        if isinstance(o, Member):
-            return self.id == o.id
-
-        return False
