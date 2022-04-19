@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 from .entity import Entity
 
 if TYPE_CHECKING:
-    from .item import Item
+    from .item.item import Item
 
 
 class Category(Entity):

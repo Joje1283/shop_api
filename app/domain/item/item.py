@@ -3,10 +3,10 @@ from __future__ import annotations
 from typing import List
 from typing import TYPE_CHECKING
 
-from .entity import Entity
+from app.domain.entity import Entity
 
 if TYPE_CHECKING:
-    from .category import Category
+    from app.domain.category import Category
 
 
 class Item(Entity):

@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from typing import Iterable
 from typing import TYPE_CHECKING
-from .entity import Entity
+from app.domain.entity import Entity
 
 if TYPE_CHECKING:
-    from .orders import Order
-    from .address import Address
+    from app.domain.order.orders import Order
+    from app.domain.address import Address
 
 
 class Member(Entity):

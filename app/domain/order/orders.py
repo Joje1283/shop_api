@@ -5,15 +5,21 @@ from datetime import datetime
 from typing import Iterable
 from typing import TYPE_CHECKING
 
-from .entity import Entity
+from app.domain.entity import Entity
 
 if TYPE_CHECKING:
-    from .member import Member
-    from .delivery import Delivery
+    from app.domain.item.item import Item
+    from app.domain.member.member import Member
+    from app.domain.delivery import Delivery
 
 
 class OrderItem(Entity):
-    pass
+    def __init__(self, id: int, item: Item, order: Order, order_price: int, count: int):
+        self.id = id
+        self.item = item
+        self.order = order
+        self.order_price = order_price
+        self.count = count
 
 
 class OrderStatus(Enum):

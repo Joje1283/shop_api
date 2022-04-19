@@ -7,7 +7,7 @@ from .entity import Entity
 
 if TYPE_CHECKING:
     from .address import Address
-    from .orders import Order
+    from app.domain.order.orders import Order
 
 
 class DeliveryStatus(Enum):
