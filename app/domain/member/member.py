@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 from app.domain.entity import Entity
 
 if TYPE_CHECKING:
-    from app.domain.order.orders import Order
+    from app.domain.order.order import Order
     from app.domain.address import Address
 
 
