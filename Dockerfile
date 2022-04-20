@@ -28,8 +28,8 @@ RUN poetry config virtualenvs.create false \
 # Creating folders, and files for a project:
 COPY . /code
 
-EXPOSE 8000
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+#EXPOSE 8000
+#CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
 
 # 도커 이미지 빌드: docker build -t shop --platform linux/amd64 .
 # 컨테이너 실행: docker run --rm --publish 8000:8000 shop
