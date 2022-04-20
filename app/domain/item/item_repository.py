@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import Optional
+from typing import Optional, List
 
 from app.domain.item.item import Item
 
@@ -17,4 +17,8 @@ class ItemRepository(ABC):
 
     @abstractmethod
     def update(self, item: Item) -> Optional[Item]:
+        raise NotImplementedError
+
+    @abstractmethod
+    def find_all(self) -> Optional[List[Item]]:
         raise NotImplementedError

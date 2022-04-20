@@ -4,7 +4,7 @@ from typing import Optional
 from app.domain.order.order import Order
 
 
-class ItemRepository(ABC):
+class OrderRepository(ABC):
     """ItemRepository defines a repository interface for Item entity."""
 
     @abstractmethod
@@ -12,5 +12,5 @@ class ItemRepository(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def find_by_id(self, id: int) -> Optional[Order]:
+    def find_by_id(self, id: str) -> Optional[Order]:
         raise NotImplementedError
