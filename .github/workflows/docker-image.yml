@@ -23,4 +23,7 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
-          echo "테스트 출력"
+          docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/shop:${GITHUB_SHA::7}
+          docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/shop:${GITHUB_SHA::7} shop_api
+          docker stop server 
+          docker run -d --rm --name server -p 8000:8080 shop_api
