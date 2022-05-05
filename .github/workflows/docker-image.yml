@@ -21,6 +21,6 @@ jobs:
         host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.SERVER_PASSWORD }}
-        port: ${{ secrets.PORT }}
+        port: ${{ secrets.SERVER_PORT }}
         script: |
           echo "테스트 출력"
