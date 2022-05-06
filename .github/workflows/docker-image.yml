@@ -23,9 +23,6 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
-          cd ~/
-          mkdir ${{ secrets.DOCKER_HUB_USERNAME }} 
-          mkdir ${GITHUB_SHA::7}
           docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/shop:${GITHUB_SHA::7}
           docker tag ${{ secrets.DOCKER_HUB_USERNAME }}/shop:${GITHUB_SHA::7} shop_api
           docker stop server 
