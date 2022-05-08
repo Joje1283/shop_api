@@ -10,6 +10,7 @@ fastapi = "^0.75.1"
 uvicorn = "^0.17.6"
 SQLAlchemy = "^1.4.35"
 shortuuid = "^1.0.8"
+pytest = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 
