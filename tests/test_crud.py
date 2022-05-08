@@ -1,9 +1,8 @@
 from sqlalchemy.orm import Session
 
-from app.models import Member
+from app.crud import Member
 from app.schemas import MemberCreate
 from tests.database import test_session
-
 
 
 class TestMember:
@@ -11,7 +10,6 @@ class TestMember:
         # given
         member_create = MemberCreate(name="조재식")
         # when
-
         member = Member.create_member(db, member_create)
         # then
         assert member.name == "조재식"
