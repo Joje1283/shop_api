@@ -18,7 +18,7 @@ def get_db():
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "2022-05-09 배포 테스트"}
 
 
 @app.get("/hello/{name}")
